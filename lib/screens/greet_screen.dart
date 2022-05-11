@@ -1,8 +1,10 @@
+import 'package:a_star_meat/screens/authentication/admin_login.dart';
 import 'package:a_star_meat/utils/colors.dart' as colors;
 import 'package:a_star_meat/utils/constants.dart' as constants;
-import 'package:a_star_meat/widgets/custom_sliver_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
+
+import '../widgets/custom_sliver_widget.dart';
 
 class GreetScreen extends StatelessWidget {
   const GreetScreen({Key? key}) : super(key: key);
@@ -10,6 +12,7 @@ class GreetScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: colors.scaffoldColor,
       body: Padding(
         padding: const EdgeInsets.all(20.0),
         child: CustomSliverView(
@@ -59,7 +62,10 @@ class GreetScreen extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.spaceBetween,
               children: [
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(
+                        MaterialPageRoute(builder: (context) => const AdminLogin()));
+                  },
                   child: SizedBox(
                     height: 50,
                     child: Center(
