@@ -1,4 +1,5 @@
 import 'package:a_star_meat/screens/authentication/admin_login.dart';
+import 'package:a_star_meat/screens/authentication/seller_login.dart';
 import 'package:a_star_meat/utils/colors.dart' as colors;
 import 'package:a_star_meat/utils/constants.dart' as constants;
 import 'package:flutter/material.dart';
@@ -81,7 +82,9 @@ class GreetScreen extends StatelessWidget {
                   style: constants.primaryButtonStyle,
                 ),
                 ElevatedButton(
-                  onPressed: () {},
+                  onPressed: () {
+                    Navigator.of(context).push(MaterialPageRoute(builder: (context)=> const SellerLogin()));
+                  },
                   child: SizedBox(
                     height: 50,
                     child: Center(

@@ -1,18 +1,19 @@
-import 'package:a_star_meat/widgets/custom_sliver_with_back_widget.dart';
-import 'package:a_star_meat/widgets/textbox_widget.dart';
 import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 import 'package:a_star_meat/utils/colors.dart' as colors;
 import 'package:a_star_meat/utils/constants.dart' as constants;
 
-class AdminLogin extends StatefulWidget {
-  const AdminLogin({Key? key}) : super(key: key);
+import '../../widgets/custom_sliver_with_back_widget.dart';
+import '../../widgets/textbox_widget.dart';
+
+class SellerLogin extends StatefulWidget {
+  const SellerLogin({Key? key}) : super(key: key);
 
   @override
-  _AdminLoginState createState() => _AdminLoginState();
+  State<SellerLogin> createState() => _SellerLoginState();
 }
 
-class _AdminLoginState extends State<AdminLogin> {
+class _SellerLoginState extends State<SellerLogin> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -27,9 +28,9 @@ class _AdminLoginState extends State<AdminLogin> {
           Align(
             alignment: Alignment.topLeft,
             child: Text(
-              'Admin Login',
+              'Welcome back!',
               style:
-                  GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 40),
+              GoogleFonts.nunito(fontWeight: FontWeight.bold, fontSize: 40),
             ),
           ),
           Padding(
